@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_ease/styles/text_style.dart';
 
 
 
