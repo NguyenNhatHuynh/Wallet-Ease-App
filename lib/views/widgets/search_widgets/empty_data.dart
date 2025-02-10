@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:wallet_ease/styles/text_style.dart';
 
 class EmptyData extends StatelessWidget {
   const EmptyData({

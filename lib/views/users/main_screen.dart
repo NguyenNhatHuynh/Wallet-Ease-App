@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +15,9 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     const HomeScreen(),
-    // const GraphScreen(),
-    // const SearchScreen(),
-    // const UserScreen()
+    const GraphScreen(),
+    const SearchScreen(),
+    const UserScreen()
   ];
 
   @override
@@ -33,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
             Expanded(
               child: AutoSizeText(
-                'Wallet Ease',
+                'Pocket Wallet',
                 maxLines: 1,
                 style: TextStyle(
                   fontSize: 42,

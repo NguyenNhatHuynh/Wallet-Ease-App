@@ -1,4 +1,13 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:wallet_ease/database/finance_db.dart';
+import 'package:wallet_ease/models/item_model/allowance_item.dart';
+import 'package:wallet_ease/models/item_model/expense_item.dart';
+import 'package:wallet_ease/models/user_model/user.dart';
+import 'package:wallet_ease/styles/text_style.dart';
+import 'package:wallet_ease/views/widgets/data_widgets/insufficient_allowance.dart';
+import 'package:wallet_ease/views/widgets/search_widgets/empty_data.dart';
 
 class RecentDataList extends StatefulWidget {
   final String searchQuery;

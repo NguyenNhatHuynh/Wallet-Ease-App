@@ -1,4 +1,9 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:wallet_ease/styles/buttons.dart';
+import 'package:wallet_ease/views/widgets/allowance_widgets/allowance_list.dart';
+import 'package:wallet_ease/views/widgets/user_widgets/profile_picture.dart';
+import 'package:wallet_ease/views/widgets/user_widgets/username.dart';
 
 class UserScreen extends StatefulWidget {
   const UserScreen({super.key});
@@ -14,7 +19,7 @@ class _UserScreenState extends State<UserScreen> {
 
   @override
   Widget build(BuildContext context) {
-       return Padding(
+    return Padding(
       padding: const EdgeInsets.only(top: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,11 +38,10 @@ class _UserScreenState extends State<UserScreen> {
           SizedBox(
             height: MediaQuery.sizeOf(context).height * .05,
             child: Username(
-              key: UniqueKey(), textAlign: TextAlign.start,
+              key: UniqueKey(),
+              textAlign: TextAlign.start,
             ),
           ),
-
-
           const SizedBox(
             height: 8,
           ),
@@ -56,7 +60,7 @@ class _UserScreenState extends State<UserScreen> {
           const SizedBox(
             height: 16,
           ),
- const Divider(
+          const Divider(
             height: 2,
             thickness: 2,
             color: Colors.blue,
@@ -71,7 +75,6 @@ class _UserScreenState extends State<UserScreen> {
                         onAllowanceAdded: _refresh,
                       )));
             },
-
             child: Container(
               width: MediaQuery.sizeOf(context).width * .45,
               height: MediaQuery.sizeOf(context).height * .05,
@@ -89,13 +92,14 @@ class _UserScreenState extends State<UserScreen> {
                     child: AutoSizeText(
                       textAlign: TextAlign.center,
                       'Add Allowance',
-                      style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
               ),
             ),
-),
+          ),
           SizedBox(
             height: 8,
           ),
