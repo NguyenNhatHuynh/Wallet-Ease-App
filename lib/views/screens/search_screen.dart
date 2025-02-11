@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_ease/controllers/dataController/search_bar.dart';
 import 'package:wallet_ease/styles/text_style.dart';
 import 'package:wallet_ease/views/widgets/search_widgets/date_sorting.dart';
 import 'package:wallet_ease/views/widgets/search_widgets/recent_data.dart';

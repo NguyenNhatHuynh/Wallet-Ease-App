@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:wallet_ease/controllers/allowanceControllers/new_allowance.dart';
 import 'package:wallet_ease/styles/buttons.dart';
+import 'package:wallet_ease/views/screens/settings.dart';
 import 'package:wallet_ease/views/widgets/allowance_widgets/allowance_list.dart';
 import 'package:wallet_ease/views/widgets/user_widgets/profile_picture.dart';
 import 'package:wallet_ease/views/widgets/user_widgets/username.dart';

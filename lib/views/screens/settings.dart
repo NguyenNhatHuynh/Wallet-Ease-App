@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wallet_ease/controllers/userController/changed_profile.dart';
+import 'package:wallet_ease/controllers/userController/username_form.dart';
 import 'package:wallet_ease/views/widgets/settings_widgets/about_app.dart';
 import 'package:wallet_ease/views/widgets/settings_widgets/currency_dropdown.dart';
 import 'package:wallet_ease/views/widgets/settings_widgets/help.dart';

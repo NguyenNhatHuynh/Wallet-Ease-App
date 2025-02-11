@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wallet_ease/controllers/expenseControllers/new_expense.dart';
 import 'package:wallet_ease/styles/buttons.dart';
 import 'package:wallet_ease/styles/text_style.dart';
 import 'package:wallet_ease/views/widgets/expenses_widgets/expenses_list.dart';
