@@ -18,6 +18,8 @@
 - **Nhắc nhở thanh toán ⏰**: Cảnh báo về các khoản thanh toán sắp đến hạn.
 - **Chế độ sáng/tối 🌞🌜**: Hỗ trợ chuyển đổi giao diện tối ưu.
 - **Đồng bộ dữ liệu ☁️**: Lưu trữ và đồng bộ hóa dữ liệu an toàn.
+- **Hồ sơ cá nhân**: Có thể chỉnh sửa "Tên người dùng, Ảnh đại diện, Tùy chỉnh hồ sơ, Xem thông tin chi tiết"
+
 
 ## 📁 Cấu Trúc Dự Án
 
@@ -25,11 +27,69 @@ Dự án sử dụng **Flutter** để phát triển ứng dụng di động v�
 
 ```
 WalletEase/
-│── models/         # Các mô hình dữ liệu (Transaction, Budget, User, etc.)
-│── screens/        # Các màn hình chính (Home, Transactions, Reports, Settings)
-│── widgets/        # Các thành phần UI được tái sử dụng (CustomButton, Chart, TransactionCard)
-│── utils/          # Các tiện ích như xử lý ngày giờ, định dạng tiền tệ
-│── providers/      # Quản lý trạng thái ứng dụng (TransactionProvider, ThemeProvider)
+lib/
+├── controllers/           // Logic controllers for the app
+│   ├── allowance controllers/
+│   │   ├── new_allowance.dart
+│   │   └── update_allowance.dart
+│   ├── data controller/
+│   │   ├── delete_item.dart
+│   │   └── search_bar.dart
+│   ├── expense controllers/
+│   │   ├── new_expense.dart
+│   │   └── update_expense.dart
+│   └── user controller/
+│       ├── changed_profile.dart
+│       └── username_form.dart
+├── database/              // Database services
+│   ├── database_service.dart
+│   └── finance_db.dart
+├── models/                // Data models
+│   ├── category model/
+│   │   ├── categories.dart
+│   │   └── category.dart
+│   ├── item model/
+│   │   ├── allowance_item.dart
+│   │   └── expense_item.dart
+│   └── user model/
+│       ├── profile_pictures_list.dart
+│       └── user.dart
+├── styles/                // Styling definitions
+│   ├── buttons.dart
+│   └── text_style.dart
+├── views/                 // UI components and screens
+│   ├── screens/
+│   │   ├── home_screen.dart
+│   │   ├── search_screen.dart
+│   │   ├── settings.dart
+│   │   └── stats_screen.dart
+│   ├── users/
+│   │   ├── main_screen.dart
+│   │   └── user_screen.dart
+│   └── widgets/
+│       ├── allowance widgets/
+│       │   └── allowance_list.dart
+│       ├── data widgets/
+│       │   ├── empty_list.dart
+│       │   └── insufficient_allowance.dart
+│       ├── expenses widgets/
+│       │   └── expenses_list.dart
+│       ├── search widgets/
+│       │   ├── date_sorting.dart
+│       │   ├── empty_data.dart
+│       │   └── recent_data.dart
+│       ├── settings widgets/
+│       │   ├── about_app.dart
+│       │   ├── currency_dropdown.dart
+│       │   └── help.dart
+│       ├── stats widgets/
+│       │   ├── pie_graph.dart
+│       │   └── total_data.dart
+│       └── user widgets/
+│           ├── profile_picture.dart
+│           ├── user_allowance.dart
+│           └── username.dart
+└── main.dart
 ```
 
 ## ⚙️ Công Nghệ Sử Dụng
@@ -86,10 +146,13 @@ flutter run
 ```
 
 ## ✅ Todo
-
-- [ ] Chức Năng Ứng Dụng
-- [ ] Giao Diện Người Dùng
-- [ ] v.vvvv
+- [x] Quản lý thu nhập & chi tiêu 📊**: Dễ dàng thêm, sửa, xóa giao dịch.
+- [x] Lập ngân sách 💵: Thiết lập giới hạn chi tiêu cho từng danh mục.
+- [x] Biểu đồ phân tích 📈: Hiển thị tổng quan tài chính bằng biểu đồ.
+- [ ] Nhắc nhở thanh toán ⏰: Cảnh báo về các khoản thanh toán sắp đến hạn.
+- [ ] Chế độ sáng/tối 🌞🌜: Hỗ trợ chuyển đổi giao diện tối ưu.
+- [x] Đồng bộ dữ liệu ☁️: Lưu trữ và đồng bộ hóa dữ liệu an toàn.
+- [x] Hồ sơ cá nhân: Có thể chỉnh sửa "Tên người dùng, Ảnh đại diện, Tùy chỉnh hồ sơ, Xem thông tin chi tiết"
 ## 👨‍💻 Tác Giả
 
 Nếu bạn thích dự án này, hãy để lại một ngôi sao 🌟 trên GitHub để ủng hộ! Cảm ơn vì sự hỗ trợ của bạn.
